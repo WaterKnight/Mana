@@ -1,0 +1,18 @@
+Version {
+	FormatVersion 800,
+}
+Model "TorchHumanOmni" {
+	NumLights 1,
+	MinimumExtent { -31.8198, -32.1888, 0 },
+	MaximumExtent { 31.8198, 31.4508, 139.569 },
+}
+Light "Omni01" {
+	ObjectId 0,
+	Omnidirectional,
+	static AttenuationStart 80,
+	static AttenuationEnd 200,
+	static Intensity 10,
+	static Color { 1, 1, 1 },
+	static AmbIntensity 0,
+	static AmbColor { 1, 1, 1 },
+}

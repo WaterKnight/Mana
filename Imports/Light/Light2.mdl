@@ -1,0 +1,105 @@
+Version {
+	FormatVersion 800,
+}
+Model "TorchHumanOmni" {
+	NumLights 1,
+	NumBones 2,
+	NumParticleEmitters2 1,
+	BlendTime 150,
+	MinimumExtent { -31.8198, -32.1888, 0 },
+	MaximumExtent { 31.8198, 31.4508, 139.569 },
+}
+Sequences 2 {
+	Anim "Stand" {
+		Interval { 0, 1133 },
+		MinimumExtent { -31.8198, -32.1888, 0 },
+		MaximumExtent { 31.8198, 31.4508, 139.569 },
+		BoundsRadius 69.8934,
+	}
+	Anim "Death" {
+		Interval { 1700, 1867 },
+		NonLooping,
+		MinimumExtent { -5.84451, -6.13632, 0 },
+		MaximumExtent { 6.35809, 6.06629, 102.507 },
+		BoundsRadius 51.9747,
+	}
+}
+GlobalSequences 1 {
+	Duration 1167,
+}
+Bone "TorchPole" {
+	ObjectId 0,
+	GeosetId 0,
+	GeosetAnimId None,
+}
+Bone "Plane01" {
+	ObjectId 1,
+	Billboarded,
+	GeosetId 1,
+	GeosetAnimId 0,
+	Scaling 3 {
+		Hermite,
+		GlobalSeqId 0,
+		0: { 1, 1, 1 },
+			InTan { 0, 0, 0 },
+			OutTan { -0.160714, -0.160714, -0.160714 },
+		567: { 0.892857, 0.892857, 0.892857 },
+			InTan { 0, 0, 0 },
+			OutTan { 0, 0, 0 },
+		1167: { 1, 1, 1 },
+			InTan { 0.160714, 0.160714, 0.160714 },
+			OutTan { 0, 0, 0 },
+	}
+}
+Light "Omni01" {
+	ObjectId 2,
+	Omnidirectional,
+	static AttenuationStart 80,
+	static AttenuationEnd 200,
+	static Intensity 10,
+	static Color { 1, 1, 1 },
+	static AmbIntensity 0,
+	static AmbColor { 1, 1, 1 },
+}
+PivotPoints 4 {
+	{ 0.16891, -0.0497866, 0 },
+	{ 0, -0.369024, 107.749 },
+	{ 0, 0.420795, 91.1175 },
+	{ 0.375275, -0.100259, 128.454 },
+}
+ParticleEmitter2 "BlizParticle01" {
+	ObjectId 3,
+	Unshaded,
+	static Speed 60,
+	static Variation 0,
+	static Latitude 13,
+	static Gravity 0,
+	Visibility 3 {
+		DontInterp,
+		0: 1,
+		1133: 0,
+		1700: 0,
+	}
+	LifeSpan 1.185,
+	static EmissionRate 9,
+	static Width 0,
+	static Length 0,
+	Additive,
+	Rows 8,
+	Columns 8,
+	Tail,
+	TailLength 0.8,
+	Time 0.5,
+	SegmentColor {
+		Color { 0, 0.917647, 1 },
+		Color { 0, 0.211765, 1 },
+		Color { 0, 0, 1 },
+	},
+	Alpha {255, 255, 0},
+	ParticleScaling {15.3, 9, 0.5},
+	LifeSpanUVAnim {0, 31, 1},
+	DecayUVAnim {32, 63, 1},
+	TailUVAnim {0, 31, 1},
+	TailDecayUVAnim {32, 63, 1},
+	TextureID 1,
+}
